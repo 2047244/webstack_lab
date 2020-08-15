@@ -4,6 +4,10 @@
   background-position: center;
   background-size: cover;
 }
+.w3-buttonv2:hover{color:#000!important;background-color:#ccc!important}
+.w3-buttonv2{border:none;width: 100%;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-containerv2{padding:1em 1.5em;width:100%}
+
 
 /* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
