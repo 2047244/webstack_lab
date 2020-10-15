@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XML_LAB.xsl"?>
+<APPSTORE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="XML_LAB.xsd">
+  <AppDetails>
+    <APPID>001</APPID>
+    <APPNAME>WhatsAPP</APPNAME>
+    <DEVELOPER>WhatsAPP Inc.</DEVELOPER>
+    <RELEASEDATE>MAY2015</RELEASEDATE>
+    <VERSION>V1.0</VERSION>
+    <DOWNLOADS>500</DOWNLOADS>
+  </AppDetails>
+  <AppDetails>
+    <APPID>002</APPID>
+    <APPNAME>Facebook</APPNAME>
+    <DEVELOPER>Facebook Inc.</DEVELOPER>
+    <RELEASEDATE>AUG2001</RELEASEDATE>
+    <VERSION>V6.0</VERSION>
+    <DOWNLOADS>900</DOWNLOADS>
+  </AppDetails>
+  <AppDetails>
+    <APPID>003</APPID>
+    <APPNAME>SnapChat</APPNAME>
+    <DEVELOPER>SnapChat Inc.</DEVELOPER>
+    <RELEASEDATE>FEB2014</RELEASEDATE>
+    <VERSION>V1.6</VERSION>
+    <DOWNLOADS>579</DOWNLOADS>
+  </AppDetails>
+  <AppDetails>
+    <APPID>004</APPID>
+    <APPNAME>PUBG</APPNAME>
+    <DEVELOPER>Tencent Inc.</DEVELOPER>
+    <RELEASEDATE>DEC2018</RELEASEDATE>
+    <VERSION>V5.0</VERSION>
+    <DOWNLOADS>1523</DOWNLOADS>
+  </AppDetails>
+  <AppDetails>
+    <APPID>005</APPID>
+    <APPNAME>Chrome</APPNAME>
+    <DEVELOPER>Google Inc.</DEVELOPER>
+    <RELEASEDATE>MAR2000</RELEASEDATE>
+    <VERSION>V9.5</VERSION>
+    <DOWNLOADS>995</DOWNLOADS>
+  </AppDetails>
+</APPSTORE>

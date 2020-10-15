@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psp:schema xmlns:psp="http://www.w3.org/2001/XMLSchema">
+<psp:element name="APPSTORE">
+<psp:complexType>
+<psp:sequence>
+<psp:element name="AppDetails" maxOccurs="10" >
+<psp:complexType>
+<psp:sequence>
+<psp:element name="APPID" type="psp:integer"></psp:element>
+<psp:element name="APPNAME" type="psp:string"></psp:element>
+<psp:element name="DEVELOPER" type="psp:string"></psp:element>
+<psp:element name="RELEASEDATE" type="psp:string"></psp:element>
+<psp:element name="VERSION" type="psp:string"></psp:element>
+<psp:element name="DOWNLOADS" type="NOOFDOWNLOADS"></psp:element>
+</psp:sequence>
+</psp:complexType>
+</psp:element>
+</psp:sequence>
+</psp:complexType>
+</psp:element>
+<psp:simpleType name="NOOFDOWNLOADS">
+<psp:restriction base="psp:integer">
+<psp:maxExclusive value="5000"></psp:maxExclusive>
+<psp:minExclusive value="1"></psp:minExclusive>
+</psp:restriction>
+</psp:simpleType>
+</psp:schema>
