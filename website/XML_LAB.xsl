@@ -3,11 +3,22 @@
 	<xsl:template match="/">
 		<!-- TODO: Auto-generated template -->
 		<html>
+            <head>
+                <style>               
+                table, th, td { 
+                border: 2px solid black;
+                border-collapse:collapse;
+                }
+                th, td {
+                padding: 10px;       
+                }
+                </style>
+            </head>
             <body>
                 <h1 align="center">APPSTORE</h1>
                 <h1 align="center">DETAILS OF THE APPS</h1>               
-                    <table border="2" align="center">
-                        <tr bgcolor="#fffff0">
+                    <table border="5" align="center">
+                        <tr bgcolor="#00ffbf">
                             <th style="text-align:left">APPID</th>
                             <th style="text-align:left">APP_NAME</th>
                             <th style="text-align:left">DEVELOPER</th>
@@ -17,22 +28,22 @@
                         </tr>
                         <xsl:for-each select="APPSTORE/AppDetails">
                             <tr>
-                                <td>
+                                <td bgcolor="#C0C0C0">
                                     <xsl:value-of select="APPID"/>
                                 </td>
-                                <td>
+                                <td bgcolor="#808080">
                                     <xsl:value-of select="APPNAME"/>
                                 </td>
-                                <td>
+                                <td bgcolor="#C0C0C0">
                                     <xsl:value-of select="DEVELOPER"/>
                                 </td>
-                                <td>
+                                <td bgcolor="#808080">
                                     <xsl:value-of select="RELEASEDATE"/>
                                 </td>
-                                <td>
+                                <td bgcolor="#C0C0C0">
                                     <xsl:value-of select="VERSION"/>
                                 </td>
-                                <td>
+                                <td bgcolor="#808080">
                                     <xsl:value-of select="DOWNLOADS"/>
                                 </td>
                             </tr>
