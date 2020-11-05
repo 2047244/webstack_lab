@@ -12,6 +12,6 @@ Repository made to put the Webstack-Lab domain website on Github and Host it!
 
 ## Link to the Login Page:-
 
-[App Store Website](https://2047244.github.io/webstack_lab/website/login_page.html)
+[Login Page](https://2047244.github.io/webstack_lab/website/login_page.html)
 
 ---
