@@ -45,6 +45,7 @@
 
         function myFunction(xml) {
             var i;
+            var alrt = 0;
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             var xmlDoc = xml.responseXML;
@@ -53,10 +54,12 @@
                 if (username == x[i].getElementsByTagName("uname")[0].childNodes[0].nodeValue) {
                     if (password == x[i].getElementsByTagName("pass")[0].childNodes[0].nodeValue) {
                         location.replace("cookies.html");
+                        alrt = 1;
                     }
-                } else {
-                    alert("Wrong ID or Password!");
                 }
+            }
+            if (alrt == 0) {
+                alert("Wrong ID or Password!");
             }
         }
     </script>
