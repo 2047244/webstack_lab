@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>APPSTORE WEBSITE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/customized.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,
+    h1 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    body,
+    html {
+        height: 100%
+    }
+</style>
+
+<body>
+    <div class="bgimg">
+        <div class="bgimg w3-hide-small" style="margin-top:32px"> </div>
+        <div class="w3-display-container w3-animate-opacity w3-text-white">
+            <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+                <div class="w3-col m12">
+                    <div class="w3-row-padding">
+                        <p class="w3-xxlarge w3-center">WELCOME</p>
+                        <div class="w3-col m12">
+                            <div class="w3-card w3-round w3-white">
+                                <div class="w3-container w3-padding" style="text-align: center;">
+                                    <button type="button" onclick="adminfunc()" style="width:33%" class="w3-button w3-large w3-purple w3-hover-purple">ADMIN</button>
+                                    <button type="button" onclick="devefunc()" style="width:33%" class="w3-button w3-large w3-purple w3-hover-purple">DEVELOPER</button>
+                                    <button type="button" onclick="userfunc()" style="width:33%" class="w3-button w3-large w3-purple w3-hover-purple">USER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="admin" style="display:none;" class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                        <h4 style="text-align: center;" class="w3-grey w3-card w3-xxxlarge">ADMIN</h4>
+                        <p class="w3-center w3-padding-large">WELCOME ADMIN</p>
+                    </div>
+                    <div id="deve" style="display:none;" class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                        <h4 style="text-align: center;" class="w3-grey w3-card w3-xxxlarge">DEVELOPER</h4>
+                        <p class="w3-center w3-padding-large">WELCOME DEVELOPER</p>
+                    </div>
+                    <div id="user" style="display:none;" class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                        <h4 style="text-align: center;" class="w3-grey w3-card w3-xxxlarge">USER</h4>
+                        <p class="w3-center w3-padding-large">WELCOME USER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="w3-center w3-black w3-padding-16">
+        <p>Github : <a href="https://github.com/2047244" title="Redirect to Github" target="_blank" class="w3-hover-text-blue">Prashant Singh Pal</a></p>
+    </footer>
+    <div class="w3-top w3-hide-small">
+        <div class="w3-bar w3-black w3-center w3-padding ">
+            <a href="index.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">Home</a>
+            <a href="about.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">About</a>
+            <a href="faq.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">FAQ</a>
+            <a href="contact.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">Contact/Blog</a>
+        </div>
+    </div>
+    <script>
+        function adminfunc() {
+            document.getElementById("admin").style.display = "block";
+            document.getElementById("deve").style.display = "none";
+            document.getElementById("user").style.display = "none";
+            var value = 1;
+            document.cookie = "status=" + value + ";expires=Fri,1 Aug 2021 01:00:00 UTC;";
+        }
+
+        function devefunc() {
+            document.getElementById("admin").style.display = "none";
+            document.getElementById("deve").style.display = "block";
+            document.getElementById("user").style.display = "none";
+            var value = 2;
+            document.cookie = "status=" + value + ";expires=Fri,1 Aug 2021 01:00:00 UTC;";
+        }
+
+        function userfunc() {
+            document.getElementById("admin").style.display = "none";
+            document.getElementById("deve").style.display = "none";
+            document.getElementById("user").style.display = "block";
+            var value = 3;
+            document.cookie = "status=" + value + ";expires=Fri,1 Aug 2021 01:00:00 UTC;";
+        }
+        window.onload = function() {
+            if (document.cookie.length != 0) {
+                var a = document.cookie.split("=");
+                var b = a[1];
+                if (b == 1) {
+                    adminfunc();
+                } else if (b == 2) {
+                    devefunc();
+                } else if (b == 3) {
+                    userfunc();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

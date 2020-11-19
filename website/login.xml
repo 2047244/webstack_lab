@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<appstore>
+	<login>
+		<uname>admin</uname>
+		<pass>admin</pass>
+	</login>
+	<login>
+		<uname>random</uname>
+		<pass>random</pass>
+	</login>
+	<login>
+		<uname>hello</uname>
+		<pass>bye</pass>
+	</login>
+</appstore>
