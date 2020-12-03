@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>APPSTORE WEBSITE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/customized.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,
+    h1 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    body,
+    html {
+        height: 100%
+    }
+    
+    a:hover img {
+        transform: scale(1.1)
+    }
+</style>
+
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div>
+            <div class="w3-hide-small" style="margin-top:32px"> </div>
+            <div class="w3-center" style="margin-left: auto;margin-right: auto;width: 99%;">
+                <p class="w3-xxlarge w3-animate-top ">APP LIST</p>
+            </div>
+            <div class="w3-center">
+                <button class="w3-button w3-purple w3-hover-pink" onclick="change_myselect(this.value) "> CLICK HERE</button>
+
+            </div>
+
+            <div>
+                <p class="w3-black" id="demo" style="text-align: center; max-width: 40%;margin-left: auto;margin-right: auto;font-size: 24px;"></p>
+            </div>
+
+            <script>
+                function change_myselect(sel) {
+                    var obj, dbParam, xmlhttp, myObj, x, txt = "";
+                    obj = {
+                        table: sel,
+                    };
+                    dbParam = JSON.stringify(obj);
+                    xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            myObj = JSON.parse(this.responseText);
+                            txt += "<table border='1' width='100%'"
+                            for (x in myObj) {
+                                txt += "<tr><td>" + myObj[x].app_name + "</td></tr>";
+                            }
+                            txt += "</table>"
+                            document.getElementById("demo").innerHTML = txt;
+                        }
+                    };
+                    xmlhttp.open("GET", "myjson.json", true);
+                    xmlhttp.send("x=" + dbParam);
+                }
+            </script>
+        </div>
+    </div>
+    <footer class="w3-center w3-black w3-padding-16">
+        <p>Github : <a href="https://github.com/2047244" title="Redirect to Github" target="_blank" class="w3-hover-text-blue">Prashant Singh Pal</a></p>
+    </footer>
+    <div class="w3-top w3-hide-small">
+        <div class="w3-bar w3-black w3-center w3-padding ">
+            <a href="index.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">Home</a>
+            <a href="about.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">About</a>
+            <a href="faq.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">FAQ</a>
+            <a href="contact.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">Contact/Blog</a>
+        </div>
+    </div>
+</body>
+
+</html>
