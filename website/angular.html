@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="angular_app.js"></script>
+</head>
+
+<body ng-app="MyApp">
+    <div ng-controller="MyCtrl">
+        Rows to Display:<input id="temp" type="number" step="1" min="0" ng-model="rowlimit" />
+        <br \>
+        <br \> Search:
+
+        <input type="text" placeholder="Seach Employees" ng-model="Search" />
+        <br \>
+        <br \>
+        <table border="1px">
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Version</th>
+                <th>Downloads</th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="apps in apps | orderBy : 'name' | limitTo:rowlimit |filter:Search ">
+                    <td>{{$index}}</td>
+                    <td>{{apps.name | uppercase}}</td>
+                    <td>{{apps.Version | lowercase}}</td>
+                    <td>{{apps.Downloads | number:0}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

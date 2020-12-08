@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Angular Document</title>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://2047244.github.io/webstack_lab/website/angular_app.js"></script>
+</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/customized.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,
+    h1 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    body,
+    html {
+        height: 100%
+    }
+    
+    a:hover img {
+        transform: scale(1.1)
+    }
+</style>
+
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div>
+            <div class="w3-hide-small" style="margin-top:32px"> </div>
+            <div class="w3-center" style="margin-left: auto;margin-right: auto;width: 99%;">
+                <p class="w3-xxlarge w3-animate-top ">Angular JS Filter</p>
+            </div>
+            <div ng-controller="MyCtrl">
+                Rows to Display:<input id="temp" type="number" step="1" min="0" ng-model="rowlimit" />
+                <br \>
+                <br \> Search:
+
+                <input type="text" placeholder="Seach Employees" ng-model="Search" />
+                <br \>
+                <br \>
+                <table border="1px">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Version</th>
+                        <th>Downloads</th>
+                    </tr>
+                    <tbody>
+                        <tr ng-repeat="apps in apps | orderBy : 'name' | limitTo:rowlimit |filter:Search ">
+                            <td>{{$index}}</td>
+                            <td>{{apps.name | uppercase}}</td>
+                            <td>{{apps.Version | lowercase}}</td>
+                            <td>{{apps.Downloads | number:0}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="w3-center w3-black w3-padding-16">
+        <p>Github : <a href="https://github.com/2047244" title="Redirect to Github" target="_blank" class="w3-hover-text-blue">Prashant Singh Pal</a></p>
+    </footer>
+    <div class="w3-top w3-hide-small">
+        <div class="w3-bar w3-black w3-center w3-padding ">
+            <a href="index.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">Home</a>
+            <a href="about.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">About</a>
+            <a href="faq.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">FAQ</a>
+            <a href="contact.html" style="width:25%" class="w3-bar-item w3-button w3-hover-purple">Contact/Blog</a>
+        </div>
+    </div>
+</body>
+
+</html>
